@@ -1,0 +1,38 @@
+# --- IDE / OS ---
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- Env / logs ---
+.env
+.env.*
+*.log
+
+# --- Build / binaries ---
+*.exe
+*.out
+*.test
+
+# --- Node ---
+node_modules/
+frontend/node_modules/
+.pnpm-store/
+frontend/dist/
+dist/
+
+# --- Go cache / temp ---
+tmp/
+temp/
+
+# --- Runtime upload assets ---
+static/uploads/
+
+# --- Large static assets (covers) ---
+static/assets/
+!static/assets/_cover_map.json
+
+# --- Characters: keep only miku image ---
+static/characters/*
+!static/characters/miku.png
+

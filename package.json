@@ -1,0 +1,13 @@
+{
+  "name": "project-sekai-search",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1"
+  }
+}

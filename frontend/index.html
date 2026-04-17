@@ -1,0 +1,278 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PJSK Tracker Frontend</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">PJSK Tracker</div>
+    <div class="api-box">
+      <input id="apiBaseInput" type="text" placeholder="API Base, 例如 http://localhost:8080" />
+      <button id="saveApiBaseBtn" class="btn ghost">保存 API 地址</button>
+    </div>
+    <div class="auth-panel">
+      <div id="authGuest" class="auth-guest">
+        <input id="usernameInput" type="text" placeholder="用户名" />
+        <input id="emailInput" type="email" placeholder="邮箱(注册必填)" />
+        <input id="passwordInput" type="password" placeholder="密码" />
+        <button id="registerBtn" class="btn ghost">注册</button>
+        <button id="loginBtn" class="btn primary">登录</button>
+      </div>
+      <div id="authUser" class="auth-user hidden-ui">
+        <span class="auth-user-name">你好，<b id="authUserName">-</b></span>
+        <button id="logoutBtn" class="btn ghost">退出</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav class="tabs">
+      <button class="tab active" data-tab="home">主页</button>
+      <button class="tab" data-tab="songs">歌曲列表</button>
+      <button class="tab" data-tab="stats">成绩统计</button>
+    </nav>
+
+    <section id="homeTab" class="tab-panel active">
+      <div id="profileCard" class="card profile-card clickable">
+        <div class="card-head">
+          <h2>个人信息</h2>
+          <span class="profile-card-hint">点击进入个人详情</span>
+        </div>
+        <div class="profile-grid">
+          <img id="profileAvatar" class="avatar" alt="avatar" />
+          <div class="profile-meta">
+            <div><span class="label">用户名：</span><span id="profileName">-</span></div>
+            <div><span class="label">角色：</span><span id="profileCharacter">-</span></div>
+            <div><span class="label">简介：</span><span id="profileBio">-</span></div>
+            <div><span class="label">平均 B30：</span><span id="profileB30">0.00</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>B30趋势</h2>
+          <span id="trendModeLabel" class="profile-card-hint">-</span>
+        </div>
+        <div class="trend-canvas-wrap">
+          <canvas id="b30TrendCanvas"></canvas>
+        </div>
+        <div id="b30TrendHint" class="song-sub">暂无趋势数据</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>Best30</h2>
+          <div class="card-head-actions">
+            <button id="randomRecommendBtn" class="btn ghost">随机推荐</button>
+            <select id="b30CalcModeSelect">
+              <option value="official">官方等级计算</option>
+              <option value="const">定数计算</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table id="b30Table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>封面</th>
+                <th>歌曲</th>
+                <th>难度</th>
+                <th>等级</th>
+                <th>状态</th>
+                <th>分值</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="songsTab" class="tab-panel">
+      <div class="card controls">
+        <input id="keywordInput" type="text" placeholder="搜索歌曲名/别名" />
+        <button id="openDiffPickerBtn" class="btn ghost">选择难度筛选</button>
+        <div id="selectedFilters" class="filter-chips"></div>
+        <select id="sortSelect">
+          <option value="newest">最新(ID降序)</option>
+          <option value="oldest">最早(ID升序)</option>
+        </select>
+        <button id="searchBtn" class="btn primary">查询</button>
+      </div>
+
+      <div id="songList" class="song-list"></div>
+
+      <div class="pager">
+        <button id="prevPageBtn" class="btn ghost">上一页</button>
+        <span id="pageInfo">第 1 页</span>
+        <button id="nextPageBtn" class="btn ghost">下一页</button>
+      </div>
+    </section>
+
+    <section id="statsTab" class="tab-panel">
+      <div class="card controls stats-controls">
+        <span id="statsDifficultyWrap" class="stats-inline">
+          <label for="statsDifficultySelect">难度</label>
+          <select id="statsDifficultySelect">
+            <option value="easy">easy</option>
+            <option value="normal">normal</option>
+            <option value="hard">hard</option>
+            <option value="expert">expert</option>
+            <option value="master" selected>master</option>
+            <option value="append">append</option>
+          </select>
+        </span>
+        <label for="statsModeSelect">统计方式</label>
+        <select id="statsModeSelect">
+          <option value="by_difficulty">按等级分类（当前难度总览）</option>
+          <option value="by_level">按难度分类（当前难度分等级）</option>
+          <option value="by_global_level">按等级分类（不分难度）</option>
+        </select>
+        <span id="statsRangeWrap" class="stats-inline hidden-ui">
+          <label for="statsMinLevelSelect">等级范围</label>
+          <select id="statsMinLevelSelect"></select>
+          <span class="stats-range-sep">-</span>
+          <select id="statsMaxLevelSelect"></select>
+        </span>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2 id="statsTitle">当前难度统计</h2>
+          <span id="statsHint" class="profile-card-hint">-</span>
+        </div>
+
+        <div class="stats-legend">
+          <span class="stats-legend-item clear">CLEAR</span>
+          <span class="stats-legend-item fc">FULL COMBO</span>
+          <span class="stats-legend-item ap">ALL PERFECT</span>
+          <span class="stats-legend-item np">NOT PLAYED</span>
+        </div>
+
+        <div id="statsBoard" class="stats-board">
+          <div class="song-sub">请先登录查看统计</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="uploadModal" class="modal hidden">
+    <div class="modal-card">
+      <h3>上传成绩</h3>
+      <div id="modalTarget" class="modal-target"></div>
+      <div class="status-options">
+        <label><input type="radio" name="scoreStatus" value="not_played" /> not played</label>
+        <label><input type="radio" name="scoreStatus" value="clear" /> clear</label>
+        <label><input type="radio" name="scoreStatus" value="full_combo" /> full combo</label>
+        <label><input type="radio" name="scoreStatus" value="all_perfect" /> all perfect</label>
+      </div>
+      <div class="modal-actions">
+        <button id="saveRecordBtn" class="btn primary">保存</button>
+        <button id="cancelRecordBtn" class="btn ghost">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="diffPickerModal" class="modal hidden">
+    <div class="modal-card">
+      <h3>选择难度筛选</h3>
+      <div class="picker-row">
+        <label for="pickerDifficulty">难度</label>
+        <select id="pickerDifficulty">
+          <option value="">仅等级(任意难度)</option>
+          <option value="easy">easy</option>
+          <option value="normal">normal</option>
+          <option value="hard">hard</option>
+          <option value="expert">expert</option>
+          <option value="master">master</option>
+          <option value="append">append</option>
+        </select>
+      </div>
+      <div class="picker-row">
+        <label for="pickerLevel">等级</label>
+        <select id="pickerLevel"></select>
+      </div>
+      <div class="modal-actions">
+        <button id="addDiffFilterBtn" class="btn primary">添加条件</button>
+        <button id="clearDiffFilterBtn" class="btn ghost">清空</button>
+        <button id="closeDiffPickerBtn" class="btn ghost">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="profileDetailModal" class="modal hidden">
+    <div class="modal-card detail-card">
+      <div class="card-head">
+        <h3>个人详情</h3>
+        <button id="closeProfileDetailBtn" class="btn ghost">关闭</button>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-left">
+          <div id="cropViewport" class="crop-viewport">
+            <img id="cropImage" class="crop-image" alt="crop preview" />
+          </div>
+          <input id="detailAvatarFileInput" type="file" accept="image/png,image/jpeg,image/webp" />
+          <input id="cropZoom" type="range" min="100" max="300" value="100" />
+          <button id="applyCropUploadBtn" class="btn primary">裁切并上传头像</button>
+        </div>
+        <div class="detail-right">
+          <div><span class="label">用户名：</span><span id="detailUserName">-</span></div>
+          <label class="label" for="characterSelect">角色</label>
+          <select id="characterSelect"></select>
+          <button id="saveCharacterBtn" class="btn ghost">保存角色</button>
+          <label class="label" for="detailProfileInput">简介</label>
+          <textarea id="detailProfileInput" rows="5" maxlength="255" placeholder="请输入简介（最多255字）"></textarea>
+          <div class="modal-actions">
+            <button id="saveProfileBtn" class="btn ghost">保存简介</button>
+            <button id="exportB30Btn" class="btn ghost">导出B30图片</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="musicDetailModal" class="modal hidden">
+    <div class="modal-card music-detail-card">
+      <div class="card-head">
+        <h3 id="musicDetailTitle">歌曲详情</h3>
+        <button id="closeMusicDetailBtn" class="btn ghost">关闭</button>
+      </div>
+      <div id="musicDetailMeta" class="music-detail-meta"></div>
+      <div class="table-wrap">
+        <table id="musicDetailTable">
+          <thead>
+            <tr>
+              <th>难度</th>
+              <th>等级</th>
+              <th>游玩人数</th>
+              <th>FC人数</th>
+              <th>AP人数</th>
+              <th>完成率</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="randomRecommendModal" class="modal hidden">
+    <div class="modal-card random-modal-card">
+      <div class="card-head">
+        <h3>随机推荐</h3>
+        <button id="closeRandomRecommendBtn" class="btn ghost">关闭</button>
+      </div>
+      <div id="randomRecommendBody" class="random-recommend-body">
+        <div class="song-sub">加载中...</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
