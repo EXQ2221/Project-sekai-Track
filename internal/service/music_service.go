@@ -81,6 +81,31 @@ func (s *MusicService) GetMusicDetail(ctx context.Context, id uint) (*dto.MusicD
 	return resp, nil
 }
 
+func (s *MusicService) AddMusicAlias(ctx context.Context, id uint, alias string) (string, error) {
+	alias = strings.TrimSpace(alias)
+	if alias == "" {
+		return "", errcode.ErrBadRequest
+	}
+
+	music, err := s.musicRepo.GetMusicByID(ctx, id)
+	if err != nil {
+		if errors.Is(err, gorm.ErrRecordNotFound) {
+			return "", errcode.ErrNotFound
+		}
+		return "", errcode.ErrInternal
+	}
+
+	merged := mergeMusicAlias(music.Alias, alias)
+	if merged == music.Alias {
+		return merged, nil
+	}
+
+	if err := s.musicRepo.UpdateMusicAlias(ctx, id, merged); err != nil {
+		return "", errcode.ErrInternal
+	}
+	return merged, nil
+}
+
 func parseSortByID(raw string) bool {
 	switch strings.ToLower(strings.TrimSpace(raw)) {
 	case "oldest", "asc", "id_asc":
@@ -171,4 +196,54 @@ func buildCoverURL(assetBundleName string) string {
 		return ""
 	}
 	return path.Join("/static/assets", name+".png")
+}
+
+func mergeMusicAlias(raw, added string) string {
+	items := splitAlias(raw)
+	seen := make(map[string]struct{}, len(items)+1)
+	out := make([]string, 0, len(items)+1)
+
+	for _, it := range items {
+		key := strings.ToLower(strings.TrimSpace(it))
+		if key == "" {
+			continue
+		}
+		if _, ok := seen[key]; ok {
+			continue
+		}
+		seen[key] = struct{}{}
+		out = append(out, it)
+	}
+
+	addedKey := strings.ToLower(strings.TrimSpace(added))
+	if addedKey != "" {
+		if _, ok := seen[addedKey]; !ok {
+			out = append(out, added)
+		}
+	}
+
+	return strings.Join(out, " / ")
+}
+
+func splitAlias(raw string) []string {
+	raw = strings.TrimSpace(raw)
+	if raw == "" || raw == "-" {
+		return nil
+	}
+	parts := strings.FieldsFunc(raw, func(r rune) bool {
+		switch r {
+		case '/', '|', ',', '，', '、', ';', '；':
+			return true
+		default:
+			return false
+		}
+	})
+	out := make([]string, 0, len(parts))
+	for _, p := range parts {
+		p = strings.TrimSpace(p)
+		if p != "" && p != "-" {
+			out = append(out, p)
+		}
+	}
+	return out
 }

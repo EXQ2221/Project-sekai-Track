@@ -496,6 +496,21 @@ th, td { text-align: left; border-bottom: 1px solid var(--line); padding: 8px 6p
   padding: 6px 2px;
 }
 
+.music-alias-editor {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 8px 0 10px;
+}
+
+.music-alias-editor input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
 .rate-cell {
   display: inline-flex;
   align-items: center;

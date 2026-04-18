@@ -52,6 +52,7 @@ func InitRouter(
 
 		private.POST("/records", handler.UploadRecordHandler(recordService))
 		private.DELETE("/records", handler.DeleteRecordHandler(recordService))
+		private.POST("/musics/:id/alias", handler.AddMusicAliasHandler(musicService))
 		private.GET("/records/b30", handler.GetBest30Handler(recordService))
 		private.GET("/records/b30/trend", handler.GetB30TrendHandler(recordService))
 		private.GET("/records/b30/image", handler.ExportB30ImageHandler(recordService, userService))

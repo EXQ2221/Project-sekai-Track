@@ -17,6 +17,7 @@
   statuses: {},
   achievementMap: {},
   currentSelect: null,
+  currentMusicDetail: null,
   profile: null,
   trendPoints: [],
   statistics: null,
@@ -773,6 +774,9 @@ function renderSongs() {
 }
 
 function closeMusicDetail() {
+  state.currentMusicDetail = null;
+  const aliasInput = $("musicAliasInput");
+  if (aliasInput) aliasInput.value = "";
   $("musicDetailModal").classList.add("hidden");
 }
 
@@ -959,6 +963,10 @@ function sortDifficultyStats(list) {
 
 function renderMusicDetail(data, fallbackSong) {
   const music = data?.music || fallbackSong || {};
+  state.currentMusicDetail = {
+    id: Number(music.id || fallbackSong?.id || 0),
+    title: music.title || fallbackSong?.title || "-",
+  };
   const stats = sortDifficultyStats(data?.difficulty_stats || []);
   const totalCount = Number(data?.total_count || 0);
   const fcTotalCount = Number(data?.fc_total_count || 0);
@@ -975,6 +983,14 @@ function renderMusicDetail(data, fallbackSong) {
       <div><span class="label">总FC / 总AP：</span>${fcTotalCount} / ${apTotalCount}</div>
     </div>
   `;
+  const aliasInput = $("musicAliasInput");
+  if (aliasInput) {
+    aliasInput.value = "";
+    aliasInput.placeholder = `新增别名（当前：${music.alias || "-"})`;
+    aliasInput.disabled = !state.token;
+  }
+  const addAliasBtn = $("addMusicAliasBtn");
+  if (addAliasBtn) addAliasBtn.disabled = !state.token;
 
   const tbody = $("musicDetailTable").querySelector("tbody");
   tbody.innerHTML = "";
@@ -1011,13 +1027,46 @@ function renderMusicDetail(data, fallbackSong) {
 }
 
 async function openMusicDetail(song) {
+  state.currentMusicDetail = { id: Number(song?.id || 0), title: song?.title || "-" };
   $("musicDetailModal").classList.remove("hidden");
   $("musicDetailTitle").textContent = `${song.title || "-"} · 歌曲详情`;
   $("musicDetailMeta").innerHTML = `<div class="music-detail-loading">加载中...</div>`;
+  if ($("musicAliasInput")) $("musicAliasInput").value = "";
   const tbody = $("musicDetailTable").querySelector("tbody");
   tbody.innerHTML = `<tr><td colspan="6">加载中...</td></tr>`;
   const data = await api(`/musics/${song.id}`);
   renderMusicDetail(data, song);
+}
+
+async function addMusicAlias() {
+  if (!state.token) return alert("请先登录");
+  const songID = Number(state.currentMusicDetail?.id || 0);
+  if (!songID) return alert("歌曲信息不存在，请重新打开详情");
+
+  const input = $("musicAliasInput");
+  const alias = String(input?.value || "").trim();
+  if (!alias) return alert("请输入要新增的别名");
+
+  const title = state.currentMusicDetail?.title || "-";
+  if (!window.confirm(`确认要为「${title}」新增别名「${alias}」吗？`)) return;
+  if (!window.confirm("请再次确认，提交后会立即写入数据库。")) return;
+
+  await api(`/musics/${songID}/alias`, {
+    method: "POST",
+    auth: true,
+    body: { alias },
+  });
+
+  notify("别名新增成功");
+  if (input) input.value = "";
+  const detail = await api(`/musics/${songID}`);
+  renderMusicDetail(detail, {
+    id: songID,
+    title,
+    assetbundleName: detail?.music?.assetbundleName || "",
+    cover_url: detail?.music?.cover_url || "",
+  });
+  await loadSongs();
 }
 
 function renderRandomRecommendation(data) {
@@ -1564,6 +1613,7 @@ function bindEvents() {
     if (e.target.id === "uploadModal") closeUploadModal();
   });
   on("closeMusicDetailBtn", "click", closeMusicDetail);
+  on("addMusicAliasBtn", "click", () => addMusicAlias().catch((e) => alert(e.message || "新增别名失败")));
   on("musicDetailModal", "click", (e) => {
     if (e.target.id === "musicDetailModal") closeMusicDetail();
   });

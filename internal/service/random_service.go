@@ -202,6 +202,8 @@ func (s *RandomService) pickCandidateDifficulties(
 			offset := float64(i) * 0.1
 			constOffsets = append(constOffsets, offset, -offset)
 		}
+		constCandidates := make([]model.MusicDifficulty, 0, 128)
+		constSeen := make(map[uint]struct{}, 128)
 		seenConst := make(map[float64]struct{}, len(constOffsets))
 		for _, offset := range constOffsets {
 			candidate := roundToOneDecimal(target + offset)
@@ -217,9 +219,10 @@ func (s *RandomService) pickCandidateDifficulties(
 				return nil, err
 			}
 			eligible := filterDifficultiesByTargetRank(diffs, userAchievementRanks, targetRank)
-			if len(eligible) > 0 {
-				return eligible, nil
-			}
+			appendUniqueDifficulties(&constCandidates, constSeen, eligible)
+		}
+		if len(constCandidates) > 0 {
+			return constCandidates, nil
 		}
 	}
 
@@ -227,6 +230,8 @@ func (s *RandomService) pickCandidateDifficulties(
 	if baseLevel < 1 {
 		baseLevel = 1
 	}
+	levelCandidates := make([]model.MusicDifficulty, 0, 128)
+	levelSeen := make(map[uint]struct{}, 128)
 	seenLevel := make(map[uint]struct{}, len(levelOffsets))
 	for _, offset := range levelOffsets {
 		level := baseLevel + offset
@@ -243,9 +248,10 @@ func (s *RandomService) pickCandidateDifficulties(
 			return nil, err
 		}
 		eligible := filterDifficultiesByTargetRank(diffs, userAchievementRanks, targetRank)
-		if len(eligible) > 0 {
-			return eligible, nil
-		}
+		appendUniqueDifficulties(&levelCandidates, levelSeen, eligible)
+	}
+	if len(levelCandidates) > 0 {
+		return levelCandidates, nil
 	}
 
 	return nil, nil
@@ -311,6 +317,19 @@ func filterDifficultiesByTargetRank(diffs []model.MusicDifficulty, userAchieveme
 		}
 	}
 	return eligible
+}
+
+func appendUniqueDifficulties(dst *[]model.MusicDifficulty, seen map[uint]struct{}, items []model.MusicDifficulty) {
+	if len(items) == 0 {
+		return
+	}
+	for _, item := range items {
+		if _, ok := seen[item.ID]; ok {
+			continue
+		}
+		seen[item.ID] = struct{}{}
+		*dst = append(*dst, item)
+	}
 }
 
 func achievementRank(status string) int {

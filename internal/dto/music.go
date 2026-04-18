@@ -38,3 +38,7 @@ type MusicDetailResponse struct {
 	FCTotalCount    uint64                `json:"fc_total_count"`
 	APTotalCount    uint64                `json:"ap_total_count"`
 }
+
+type AddMusicAliasRequest struct {
+	Alias string `json:"alias" binding:"required"`
+}

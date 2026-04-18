@@ -13,6 +13,7 @@ import (
 type MusicRepository interface {
 	ListMusics(ctx context.Context, q dto.ListMusicQuery) ([]model.Music, int64, error)
 	GetMusicByID(ctx context.Context, id uint) (*model.Music, error)
+	UpdateMusicAlias(ctx context.Context, id uint, alias string) error
 	ListDifficultyStatsByMusicID(ctx context.Context, musicID uint) ([]dto.MusicDifficultyStat, error)
 	FindDifficultiesByLevel(ctx context.Context, targetConst uint) ([]model.MusicDifficulty, error)
 	FindDifficultiesByConst(ctx context.Context, targetConst float64) ([]model.MusicDifficulty, error)
@@ -93,6 +94,13 @@ func (r *musicRepo) GetMusicByID(ctx context.Context, id uint) (*model.Music, er
 	}
 
 	return &music, nil
+}
+
+func (r *musicRepo) UpdateMusicAlias(ctx context.Context, id uint, alias string) error {
+	return r.db.WithContext(ctx).
+		Model(&model.Music{}).
+		Where("id = ?", id).
+		Update("alias", alias).Error
 }
 
 func (r *musicRepo) ListDifficultyStatsByMusicID(ctx context.Context, musicID uint) ([]dto.MusicDifficultyStat, error) {
