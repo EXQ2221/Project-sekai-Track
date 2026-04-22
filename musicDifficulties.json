@@ -37,7 +37,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  1147,
-        "const": 0 
+        "const": 26.2
     },
     {
         "id":  6,
@@ -197,7 +197,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  903,
-        "const":  0
+        "const":  27.7
     },
     {
         "id":  46,
@@ -237,7 +237,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1136,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  51,
@@ -437,7 +437,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  824,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  101,
@@ -597,7 +597,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  989,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  136,
@@ -837,7 +837,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1072,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  221,
@@ -877,7 +877,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1039,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  226,
@@ -1029,7 +1029,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  30,
         "totalNoteCount":  1502,
-        "const":  0
+        "const":  30.3
     },
     {
         "id":  245,
@@ -1077,7 +1077,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  986,
-        "const":  0
+        "const":  27.8
     },
     {
         "id":  251,
@@ -1237,7 +1237,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  895,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  281,
@@ -1517,7 +1517,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  851,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  331,
@@ -1557,7 +1557,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  829,
-        "const":  0
+        "const":  26.4
     },
     {
         "id":  336,
@@ -1637,7 +1637,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1040,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  346,
@@ -1677,7 +1677,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  959,
-        "const":  0
+        "const":  27.9
     },
     {
         "id":  351,
@@ -1717,7 +1717,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  861,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  356,
@@ -1797,7 +1797,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  841,
-        "const":  0
+        "const":  27.3
     },
     {
         "id":  366,
@@ -1837,7 +1837,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  589,
-        "const":  0
+        "const":  26.9
     },
     {
         "id":  371,
@@ -1877,7 +1877,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  833,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  376,
@@ -1917,7 +1917,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  858,
-        "const":  0
+        "const":  27.7
     },
     {
         "id":  381,
@@ -2077,7 +2077,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1016,
-        "const":  0
+        "const":  27.8
     },
     {
         "id":  411,
@@ -2237,7 +2237,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1004,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  431,
@@ -2277,7 +2277,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1149,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  436,
@@ -2357,7 +2357,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  918,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  446,
@@ -2477,7 +2477,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1002,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  461,
@@ -2517,7 +2517,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1048,
-        "const":  0
+        "const":  27.8
     },
     {
         "id":  466,
@@ -2557,7 +2557,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  915,
-        "const":  0
+        "const":  29.0
     },
     {
         "id":  471,
@@ -2597,7 +2597,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1166,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  476,
@@ -2637,7 +2637,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  982,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  481,
@@ -2797,7 +2797,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  805,
-        "const":  0
+        "const":  26.9
     },
     {
         "id":  501,
@@ -2877,7 +2877,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1053,
-        "const":  0
+        "const":  28.0
     },
     {
         "id":  511,
@@ -2997,7 +2997,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  871,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  526,
@@ -3117,7 +3117,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1075,
-        "const":  0
+        "const":  27.9
     },
     {
         "id":  541,
@@ -3157,7 +3157,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1019,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  546,
@@ -3437,7 +3437,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1247,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  581,
@@ -3637,7 +3637,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1035,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  606,
@@ -3717,7 +3717,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1074,
-        "const":  0
+        "const":  27.9
     },
     {
         "id":  616,
@@ -3997,7 +3997,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  814,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  651,
@@ -4029,7 +4029,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  30,
         "totalNoteCount":  1520,
-        "const":  0
+        "const":  30.5
     },
     {
         "id":  655,
@@ -4077,7 +4077,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  814,
-        "const":  0
+        "const":  27.3
     },
     {
         "id":  661,
@@ -4189,7 +4189,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  29,
         "totalNoteCount":  1099,
-        "const":  0
+        "const":  29.4
     },
     {
         "id":  675,
@@ -4397,7 +4397,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  802,
-        "const":  0
+        "const":  27.7
     },
     {
         "id":  701,
@@ -4437,7 +4437,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  833,
-        "const":  0
+        "const":  27.8
     },
     {
         "id":  706,
@@ -4477,7 +4477,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  547,
-        "const":  0
+        "const":  26.9
     },
     {
         "id":  711,
@@ -4517,7 +4517,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1089,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  716,
@@ -4557,7 +4557,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  814,
-        "const":  0
+        "const":  26.6
     },
     {
         "id":  721,
@@ -4677,7 +4677,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1005,
-        "const":  0
+        "const":  27.7
     },
     {
         "id":  736,
@@ -4717,7 +4717,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  1092,
-        "const":  0
+        "const":  26.5
     },
     {
         "id":  741,
@@ -4757,7 +4757,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  703,
-        "const":  0
+        "const":  26.9
     },
     {
         "id":  746,
@@ -4797,7 +4797,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  859,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  751,
@@ -4997,7 +4997,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  843,
-        "const":  0
+        "const":  27.3
     },
     {
         "id":  776,
@@ -5269,7 +5269,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1553,
-        "const":  0
+        "const":  31.7
     },
     {
         "id":  810,
@@ -5309,7 +5309,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1223,
-        "const":  0
+        "const":  31.5
     },
     {
         "id":  815,
@@ -5349,7 +5349,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  30,
         "totalNoteCount":  1545,
-        "const":  0
+        "const":  30.2
     },
     {
         "id":  820,
@@ -5557,7 +5557,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1400,
-        "const":  0
+        "const":  27.7
     },
     {
         "id":  846,
@@ -5757,7 +5757,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1002,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  871,
@@ -5829,7 +5829,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1730,
-        "const":  0
+        "const":  31.7
     },
     {
         "id":  880,
@@ -5957,7 +5957,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1167,
-        "const":  0
+        "const":  27.9
     },
     {
         "id":  896,
@@ -5997,7 +5997,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1281,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  901,
@@ -6037,7 +6037,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1173,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  906,
@@ -6317,7 +6317,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1060,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  941,
@@ -6357,7 +6357,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  592,
-        "const":  0
+        "const":  26.7
     },
     {
         "id":  946,
@@ -6397,7 +6397,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  784,
-        "const":  0
+        "const":  27.3
     },
     {
         "id":  951,
@@ -6437,7 +6437,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  784,
-        "const":  0
+        "const":  27.1
     },
     {
         "id":  956,
@@ -6477,7 +6477,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  798,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  961,
@@ -6517,7 +6517,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  785,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  966,
@@ -6557,7 +6557,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  966,
-        "const":  0
+        "const":  27.7
     },
     {
         "id":  971,
@@ -6637,7 +6637,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  601,
-        "const":  0
+        "const":  26.5
     },
     {
         "id":  981,
@@ -6797,7 +6797,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  943,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  1001,
@@ -6877,7 +6877,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  998,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  1011,
@@ -6917,7 +6917,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  999,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  1016,
@@ -6957,7 +6957,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1302,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  1021,
@@ -7077,7 +7077,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  855,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  1036,
@@ -7117,7 +7117,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1035,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  1041,
@@ -7157,7 +7157,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  685,
-        "const":  0
+        "const":  26.3
     },
     {
         "id":  1046,
@@ -7237,7 +7237,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1062,
-        "const":  0
+        "const":  27.4
     },
     {
         "id":  1056,
@@ -7277,7 +7277,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  821,
-        "const":  0
+        "const":  27.3
     },
     {
         "id":  1061,
@@ -7357,7 +7357,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  966,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  1071,
@@ -7397,7 +7397,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  898,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  1076,
@@ -7477,7 +7477,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  769,
-        "const":  0
+        "const":  27.4
     },
     {
         "id":  1086,
@@ -7517,7 +7517,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  983,
-        "const":  0
+        "const":  26.8
     },
     {
         "id":  1091,
@@ -7557,7 +7557,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1062,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  1096,
@@ -7717,7 +7717,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  906,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  1116,
@@ -7917,7 +7917,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  860,
-        "const":  0
+        "const":  26.1
     },
     {
         "id":  1141,
@@ -8077,7 +8077,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1058,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  1161,
@@ -8277,7 +8277,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  662,
-        "const":  0
+        "const":  26.7
     },
     {
         "id":  1186,
@@ -8317,7 +8317,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  930,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  1191,
@@ -8397,7 +8397,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1068,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  1201,
@@ -8482,7 +8482,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  852,
-        "const":  0
+        "const":  27.3
     },
     {
         "id":  1211,
@@ -8682,7 +8682,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  997,
-        "const":  0
+        "const":  26.3
     },
     {
         "id":  1236,
@@ -8794,7 +8794,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  30,
         "totalNoteCount":  1396,
-        "const":  0
+        "const":  30.2
     },
     {
         "id":  1250,
@@ -9002,7 +9002,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1190,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  1276,
@@ -9042,7 +9042,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1115,
-        "const":  0
+        "const":  27.4
     },
     {
         "id":  1281,
@@ -9122,7 +9122,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  994,
-        "const":  0
+        "const":  27.9
     },
     {
         "id":  1291,
@@ -9282,7 +9282,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1178,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  1311,
@@ -9322,7 +9322,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  690,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  1316,
@@ -9402,7 +9402,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1247,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  1326,
@@ -9482,7 +9482,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1186,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  1336,
@@ -9562,7 +9562,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  999,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  1346,
@@ -9802,7 +9802,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1063,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  1376,
@@ -9962,7 +9962,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1096,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  1396,
@@ -10002,7 +10002,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1112,
-        "const":  0
+        "const":  27.4
     },
     {
         "id":  1401,
@@ -10242,7 +10242,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  918,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  1431,
@@ -10282,7 +10282,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  918,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  1436,
@@ -10487,7 +10487,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  715,
-        "const":  0
+        "const":  26.9
     },
     {
         "id":  1461,
@@ -10527,7 +10527,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  943,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  1466,
@@ -10567,7 +10567,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  814,
-        "const":  0
+        "const":  26.8
     },
     {
         "id":  1471,
@@ -10607,7 +10607,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  832,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  1476,
@@ -11007,7 +11007,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  866,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  1526,
@@ -11047,7 +11047,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1117,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  1531,
@@ -11167,7 +11167,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  844,
-        "const":  0
+        "const":  27.8
     },
     {
         "id":  1546,
@@ -11247,7 +11247,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  852,
-        "const":  0
+        "const":  26.5
     },
     {
         "id":  1556,
@@ -11287,7 +11287,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1090,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  1561,
@@ -11367,7 +11367,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1105,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  1571,
@@ -11399,7 +11399,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1804,
-        "const":  0
+        "const":  31.6
     },
     {
         "id":  1575,
@@ -11447,7 +11447,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1305,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  1581,
@@ -11527,7 +11527,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1122,
-        "const":  0
+        "const":  27.4
     },
     {
         "id":  1591,
@@ -11687,7 +11687,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1089,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  1611,
@@ -11767,7 +11767,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  981,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  1621,
@@ -11807,7 +11807,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  778,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  1626,
@@ -11847,7 +11847,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1340,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  1631,
@@ -11919,7 +11919,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  29,
         "totalNoteCount":  1491,
-        "const":  0
+        "const":  29.6
     },
     {
         "id":  1640,
@@ -11959,7 +11959,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1539,
-        "const":  0
+        "const":  31.8
     },
     {
         "id":  1645,
@@ -12007,7 +12007,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  1097,
-        "const":  0
+        "const":  26.7
     },
     {
         "id":  1651,
@@ -12087,7 +12087,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  625,
-        "const":  0
+        "const":  26.3
     },
     {
         "id":  1661,
@@ -12327,7 +12327,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  735,
-        "const":  0
+        "const":  26.1
     },
     {
         "id":  1691,
@@ -12367,7 +12367,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  987,
-        "const":  0
+        "const":  26.5
     },
     {
         "id":  1696,
@@ -12607,7 +12607,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  984,
-        "const":  0
+        "const":  28.1
     },
     {
         "id":  1726,
@@ -12687,7 +12687,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1007,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  1736,
@@ -12727,7 +12727,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  983,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  1741,
@@ -12807,7 +12807,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1003,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  1751,
@@ -12847,7 +12847,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  1232,
-        "const":  0
+        "const":  26.8
     },
     {
         "id":  1756,
@@ -12887,7 +12887,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1092,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  1761,
@@ -13127,7 +13127,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  832,
-        "const":  0
+        "const":  26.1
     },
     {
         "id":  1791,
@@ -13207,7 +13207,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1188,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  1801,
@@ -13287,7 +13287,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1013,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  1811,
@@ -13407,7 +13407,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1262,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  1826,
@@ -13567,7 +13567,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1100,
-        "const":  0
+        "const":  27.3
     },
     {
         "id":  1846,
@@ -13599,7 +13599,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1441,
-        "const":  0
+        "const":  31.7
     },
     {
         "id":  1850,
@@ -13767,7 +13767,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  821,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  1876,
@@ -14047,7 +14047,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  696,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  1911,
@@ -14087,7 +14087,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  812,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  1916,
@@ -14127,7 +14127,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  619,
-        "const":  0
+        "const":  26.9
     },
     {
         "id":  1921,
@@ -14207,7 +14207,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  909,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  1931,
@@ -14295,7 +14295,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1233,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  1951,
@@ -14415,7 +14415,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1096,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  1966,
@@ -14455,7 +14455,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  759,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  1971,
@@ -14495,7 +14495,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1404,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  1976,
@@ -14615,7 +14615,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  900,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  1991,
@@ -14695,7 +14695,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  810,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2001,
@@ -14775,7 +14775,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1251,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  2011,
@@ -14815,7 +14815,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  892,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  2016,
@@ -14855,7 +14855,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  781,
-        "const":  0
+        "const":  27.7
     },
     {
         "id":  2021,
@@ -14895,7 +14895,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  1067,
-        "const":  0
+        "const":  27.1
     },
     {
         "id":  2026,
@@ -15295,7 +15295,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  919,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2076,
@@ -15495,7 +15495,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  728,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  2106,
@@ -15535,7 +15535,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  863,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  2111,
@@ -15615,7 +15615,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  868,
-        "const":  0
+        "const":  28.1
     },
     {
         "id":  2121,
@@ -15695,7 +15695,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  859,
-        "const":  0
+        "const":  27.2
     },
     {
         "id":  2131,
@@ -15855,7 +15855,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1071,
-        "const":  0
+        "const":  28.2
     },
     {
         "id":  2151,
@@ -15895,7 +15895,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  893,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  2156,
@@ -15935,7 +15935,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  955,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2161,
@@ -16015,7 +16015,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  757,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2171,
@@ -16095,7 +16095,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  974,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  2181,
@@ -16295,7 +16295,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1048,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2206,
@@ -16335,7 +16335,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  595,
-        "const":  0
+        "const":  26.4
     },
     {
         "id":  2211,
@@ -16375,7 +16375,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1048,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  2216,
@@ -16455,7 +16455,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1128,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  2226,
@@ -16527,7 +16527,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  30,
         "totalNoteCount":  1392,
-        "const":  0
+        "const":  30.1
     },
     {
         "id":  2235,
@@ -16567,7 +16567,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  29,
         "totalNoteCount":  1259,
-        "const":  0
+        "const":  29.1
     },
     {
         "id":  2240,
@@ -16607,7 +16607,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  30,
         "totalNoteCount":  1437,
-        "const":  0
+        "const":  30.1
     },
     {
         "id":  2245,
@@ -16815,7 +16815,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  817,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2276,
@@ -16895,7 +16895,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  890,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  2286,
@@ -16935,7 +16935,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  954,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  2296,
@@ -16975,7 +16975,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  940,
-        "const":  31.9
+        "const":  28.3
     },
     {
         "id":  2301,
@@ -17095,7 +17095,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  817,
-        "const":  0
+        "const":  26.3
     },
     {
         "id":  2316,
@@ -17135,7 +17135,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  996,
-        "const":  0
+        "const":  26.5
     },
     {
         "id":  2321,
@@ -17167,7 +17167,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1266,
-        "const":  0
+        "const":  31.2
     },
     {
         "id":  2325,
@@ -17215,7 +17215,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  904,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2331,
@@ -17335,7 +17335,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  920,
-        "const":  0
+        "const":  27.3
     },
     {
         "id":  2346,
@@ -17375,7 +17375,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  639,
-        "const":  0
+        "const":  26.1
     },
     {
         "id":  2351,
@@ -17415,7 +17415,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  769,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2356,
@@ -17495,7 +17495,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1023,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  2366,
@@ -17615,7 +17615,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  783,
-        "const":  0
+        "const":  27.1
     },
     {
         "id":  2381,
@@ -17775,7 +17775,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  938,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  2406,
@@ -17935,7 +17935,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  918,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2426,
@@ -17967,7 +17967,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1387,
-        "const":  0
+        "const":  31.3
     },
     {
         "id":  2430,
@@ -18007,7 +18007,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1495,
-        "const":  0
+        "const":  31.5
     },
     {
         "id":  2435,
@@ -18047,7 +18047,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1637,
-        "const":  0
+        "const":  31.2
     },
     {
         "id":  2440,
@@ -18135,7 +18135,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1015,
-        "const":  0
+        "const":  28.2
     },
     {
         "id":  2451,
@@ -18215,7 +18215,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  918,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2461,
@@ -18255,7 +18255,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1033,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  2466,
@@ -18415,7 +18415,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  948,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  2486,
@@ -19055,7 +19055,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1101,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2571,
@@ -19255,7 +19255,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  787,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2596,
@@ -19375,7 +19375,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  837,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  2611,
@@ -19415,7 +19415,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1115,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2616,
@@ -19535,7 +19535,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  699,
-        "const":  0
+        "const":  26.6
     },
     {
         "id":  2631,
@@ -19575,7 +19575,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  897,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2641,
@@ -19615,7 +19615,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1037,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  2646,
@@ -19655,7 +19655,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1107,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  2651,
@@ -19735,7 +19735,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  679,
-        "const":  0
+        "const":  27.7
     },
     {
         "id":  2661,
@@ -19895,7 +19895,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  960,
-        "const":  0
+        "const":  28.1
     },
     {
         "id":  2686,
@@ -19975,7 +19975,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  699,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  2696,
@@ -20127,7 +20127,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  29,
         "totalNoteCount":  1299,
-        "const":  0
+        "const":  29.6
     },
     {
         "id":  2715,
@@ -20215,7 +20215,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  975,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  2726,
@@ -20335,7 +20335,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  876,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2741,
@@ -20615,7 +20615,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  999,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2781,
@@ -20895,7 +20895,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  408,
-        "const":  0
+        "const":  27.0
     },
     {
         "id":  2821,
@@ -20935,7 +20935,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  788,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  2826,
@@ -21175,7 +21175,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  520,
-        "const":  0
+        "const":  27.1
     },
     {
         "id":  2861,
@@ -21215,7 +21215,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1111,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2866,
@@ -21375,7 +21375,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  667,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  2886,
@@ -21415,7 +21415,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  759,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  2891,
@@ -21455,7 +21455,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1060,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2896,
@@ -21495,7 +21495,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  969,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  2901,
@@ -21575,7 +21575,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  820,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  2911,
@@ -22015,7 +22015,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  773,
-        "const":  0
+        "const":  26.5
     },
     {
         "id":  2966,
@@ -22055,7 +22055,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  765,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  2971,
@@ -22175,7 +22175,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  555,
-        "const":  0
+        "const":  26.1
     },
     {
         "id":  2996,
@@ -22215,7 +22215,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  825,
-        "const":  0
+        "const":  28.9
     },
     {
         "id":  3001,
@@ -22295,7 +22295,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  961,
-        "const":  0
+        "const":  27.7
     },
     {
         "id":  3016,
@@ -22335,7 +22335,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  839,
-        "const":  0
+        "const":  26.5
     },
     {
         "id":  3021,
@@ -22375,7 +22375,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  860,
-        "const":  0
+        "const":  28.2
     },
     {
         "id":  3026,
@@ -22455,7 +22455,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  607,
-        "const":  0
+        "const":  26.2
     },
     {
         "id":  3036,
@@ -22615,7 +22615,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  902,
-        "const":  0
+        "const":  28.1
     },
     {
         "id":  3061,
@@ -22655,7 +22655,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  773,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  3066,
@@ -22735,7 +22735,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1097,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  3076,
@@ -22815,7 +22815,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  903,
-        "const":  0
+        "const":  27.1
     },
     {
         "id":  3086,
@@ -22855,7 +22855,7 @@
         "musicDifficulty":  "master",
         "playLevel":  26,
         "totalNoteCount":  904,
-        "const":  0
+        "const":  26.5
     },
     {
         "id":  3091,
@@ -22895,7 +22895,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  792,
-        "const":  0
+        "const":  27.6
     },
     {
         "id":  3096,
@@ -23295,7 +23295,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  832,
-        "const":  0
+        "const":  28.2
     },
     {
         "id":  3146,
@@ -23335,7 +23335,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  907,
-        "const":  0
+        "const":  28.8
     },
     {
         "id":  3156,
@@ -23455,7 +23455,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  889,
-        "const":  0
+        "const":  28.5
     },
     {
         "id":  3171,
@@ -23495,7 +23495,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  938,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  3176,
@@ -23735,7 +23735,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  941,
-        "const":  0
+        "const":  28.6
     },
     {
         "id":  3211,
@@ -23815,7 +23815,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  704,
-        "const":  0
+        "const":  27.1
     },
     {
         "id":  3221,
@@ -24055,7 +24055,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  789,
-        "const":  0
+        "const":  28.3
     },
     {
         "id":  3251,
@@ -24215,7 +24215,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  1331,
-        "const":  0
+        "const":  28.2
     },
     {
         "id":  3271,
@@ -24335,7 +24335,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  791,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  3291,
@@ -24455,7 +24455,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  588,
-        "const":  0
+        "const":  27.8
     },
     {
         "id":  3311,
@@ -24687,7 +24687,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1380,
-        "const":  0
+        "const":  31.3
     },
     {
         "id":  3340,
@@ -24775,7 +24775,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  809,
-        "const":  0
+        "const":  27.8
     },
     {
         "id":  3351,
@@ -24959,7 +24959,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  830,
-        "const":  0
+        "const":  28.7
     },
     {
         "id":  3391,
@@ -25079,7 +25079,7 @@
         "musicDifficulty":  "master",
         "playLevel":  28,
         "totalNoteCount":  826,
-        "const":  0
+        "const":  28.4
     },
     {
         "id":  3421,
@@ -25351,7 +25351,7 @@
         "musicDifficulty":  "expert",
         "playLevel":  31,
         "totalNoteCount":  1634,
-        "const":  0
+        "const":  31.3
     },
     {
         "id":  3455,
@@ -25639,7 +25639,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  739,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  3496,
@@ -26159,7 +26159,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  641,
-        "const":  0
+        "const":  27.5
     },
     {
         "id":  3586,
@@ -26319,7 +26319,7 @@
         "musicDifficulty":  "master",
         "playLevel":  27,
         "totalNoteCount":  580,
-        "const":  0
+        "const":  27.2
     },
     {
         "id":  3606,

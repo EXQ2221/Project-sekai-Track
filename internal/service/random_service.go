@@ -61,6 +61,10 @@ func (s *RandomService) RandomMusicRecommendation(ctx context.Context, userID ui
 		b30Avg = user.B30AvgConst
 	}
 	actualMode := calcMode
+	b30MinScore, err := s.getB30MinScore(ctx, userID, actualMode)
+	if err != nil {
+		return nil, errcode.ErrInternal
+	}
 
 	userAchievementRanks, err := s.loadUserAchievementRanks(ctx, userID)
 	if err != nil {
@@ -71,15 +75,19 @@ func (s *RandomService) RandomMusicRecommendation(ctx context.Context, userID ui
 	targetRank := targetAchievementRank(mode)
 	target := pickTargetLevelOrConst(b30Avg, actualMode, mode)
 
-	diffs, err := s.pickCandidateDifficulties(ctx, actualMode, target, userAchievementRanks, targetRank)
+	diffs, err := s.pickCandidateDifficulties(ctx, actualMode, target, mode, userAchievementRanks, targetRank, b30MinScore)
 	if err != nil {
 		return nil, errcode.ErrInternal
 	}
 	if len(diffs) == 0 && calcMode == calcModeConst {
 		// const candidates are sparse; degrade to official mode when needed.
 		actualMode = calcModeOff
+		b30MinScore, err = s.getB30MinScore(ctx, userID, actualMode)
+		if err != nil {
+			return nil, errcode.ErrInternal
+		}
 		target = pickTargetLevelOrConst(user.B30Avg, actualMode, mode)
-		diffs, err = s.pickCandidateDifficulties(ctx, actualMode, target, userAchievementRanks, targetRank)
+		diffs, err = s.pickCandidateDifficulties(ctx, actualMode, target, mode, userAchievementRanks, targetRank, b30MinScore)
 		if err != nil {
 			return nil, errcode.ErrInternal
 		}
@@ -191,8 +199,10 @@ func (s *RandomService) pickCandidateDifficulties(
 	ctx context.Context,
 	calcMode string,
 	target float64,
+	targetType int,
 	userAchievementRanks map[uint]int,
 	targetRank int,
+	b30MinScore float64,
 ) ([]model.MusicDifficulty, error) {
 	levelOffsets := []int{0, 1, -1, 2, -2}
 	if calcMode == calcModeConst {
@@ -218,7 +228,7 @@ func (s *RandomService) pickCandidateDifficulties(
 			if err != nil {
 				return nil, err
 			}
-			eligible := filterDifficultiesByTargetRank(diffs, userAchievementRanks, targetRank)
+			eligible := filterDifficultiesByTargetRankAndMinScore(diffs, userAchievementRanks, targetRank, calcMode, targetType, b30MinScore)
 			appendUniqueDifficulties(&constCandidates, constSeen, eligible)
 		}
 		if len(constCandidates) > 0 {
@@ -247,7 +257,7 @@ func (s *RandomService) pickCandidateDifficulties(
 		if err != nil {
 			return nil, err
 		}
-		eligible := filterDifficultiesByTargetRank(diffs, userAchievementRanks, targetRank)
+		eligible := filterDifficultiesByTargetRankAndMinScore(diffs, userAchievementRanks, targetRank, calcMode, targetType, b30MinScore)
 		appendUniqueDifficulties(&levelCandidates, levelSeen, eligible)
 	}
 	if len(levelCandidates) > 0 {
@@ -305,7 +315,14 @@ func targetAchievementRank(mode int) int {
 	return achievementRank("full_combo")
 }
 
-func filterDifficultiesByTargetRank(diffs []model.MusicDifficulty, userAchievementRanks map[uint]int, targetRank int) []model.MusicDifficulty {
+func filterDifficultiesByTargetRankAndMinScore(
+	diffs []model.MusicDifficulty,
+	userAchievementRanks map[uint]int,
+	targetRank int,
+	calcMode string,
+	targetType int,
+	b30MinScore float64,
+) []model.MusicDifficulty {
 	if len(diffs) == 0 {
 		return nil
 	}
@@ -313,10 +330,50 @@ func filterDifficultiesByTargetRank(diffs []model.MusicDifficulty, userAchieveme
 	for _, diff := range diffs {
 		current := userAchievementRanks[diff.ID]
 		if current < targetRank {
-			eligible = append(eligible, diff)
+			targetScore := estimateTargetScore(diff, calcMode, targetType)
+			if targetScore >= b30MinScore {
+				eligible = append(eligible, diff)
+			}
 		}
 	}
 	return eligible
+}
+
+func estimateTargetScore(diff model.MusicDifficulty, calcMode string, targetType int) float64 {
+	baseLevel := float64(diff.PlayLevel)
+	if calcMode == calcModeConst && diff.Const > 0 {
+		baseLevel = diff.Const
+	}
+
+	switch targetType {
+	case allPerfectMode:
+		return baseLevel
+	case fullComboMode:
+		if baseLevel >= 33 {
+			return baseLevel - 1.0
+		}
+		return baseLevel - 1.5
+	default:
+		return baseLevel - 5.0
+	}
+}
+
+func (s *RandomService) getB30MinScore(ctx context.Context, userID uint, calcMode string) (float64, error) {
+	items, _, err := s.recordRepo.GetBest30ByUserID(ctx, userID, calcMode)
+	if err != nil {
+		return 0, err
+	}
+	if len(items) == 0 {
+		return math.Inf(-1), nil
+	}
+
+	minScore := items[0].ScoreValue
+	for i := 1; i < len(items); i++ {
+		if items[i].ScoreValue < minScore {
+			minScore = items[i].ScoreValue
+		}
+	}
+	return minScore, nil
 }
 
 func appendUniqueDifficulties(dst *[]model.MusicDifficulty, seen map[uint]struct{}, items []model.MusicDifficulty) {

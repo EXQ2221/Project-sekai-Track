@@ -3,7 +3,9 @@ package service
 import (
 	"context"
 	"errors"
+	"fmt"
 	"path"
+	"sort"
 	"strconv"
 	"strings"
 	"unicode"
@@ -41,11 +43,23 @@ func (s *MusicService) ListMusics(ctx context.Context, q dto.ListMusicQuery) ([]
 	}
 	q.Filters = filters
 
+	cacheKey := buildMusicListCacheKey(q)
+	var cached musicListCacheValue
+	if ok, err := redisGetJSON(ctx, cacheKey, &cached); err == nil && ok {
+		return cached.List, cached.Total, cached.Page, cached.Size, nil
+	}
+
 	list, total, err := s.musicRepo.ListMusics(ctx, q)
 	if err != nil {
 		return nil, 0, 0, 0, errcode.ErrInternal
 	}
 	enrichMusicCoverURL(list)
+	_ = redisSetJSON(ctx, cacheKey, musicListCacheValue{
+		List:  list,
+		Total: total,
+		Page:  q.Page,
+		Size:  q.Size,
+	}, musicListCacheTTL)
 
 	return list, total, q.Page, q.Size, nil
 }
@@ -223,6 +237,35 @@ func mergeMusicAlias(raw, added string) string {
 	}
 
 	return strings.Join(out, " / ")
+}
+
+type musicListCacheValue struct {
+	List  []model.Music `json:"list"`
+	Total int64         `json:"total"`
+	Page  int           `json:"page"`
+	Size  int           `json:"size"`
+}
+
+func buildMusicListCacheKey(q dto.ListMusicQuery) string {
+	filterTokens := make([]string, 0, len(q.Filters))
+	for _, f := range q.Filters {
+		diff := strings.ToLower(strings.TrimSpace(f.Difficulty))
+		if diff == "" {
+			diff = "*"
+		}
+		filterTokens = append(filterTokens, fmt.Sprintf("%s:%d", diff, f.PlayLevel))
+	}
+	sort.Strings(filterTokens)
+
+	return fmt.Sprintf(
+		"cache:music:list:p=%d:s=%d:kw=%s:sort=%t:raw=%s:filters=%s",
+		q.Page,
+		q.Size,
+		strings.ToLower(strings.TrimSpace(q.Keyword)),
+		q.SortDescByID,
+		strings.ToLower(strings.TrimSpace(q.DifficultyLevels)),
+		strings.Join(filterTokens, ","),
+	)
 }
 
 func splitAlias(raw string) []string {

@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"errors"
+	"fmt"
 	"strings"
 
 	"Project_sekai_search/internal/dto"
@@ -48,15 +49,28 @@ func (s *RecordService) UploadRecord(ctx context.Context, userID uint, req dto.U
 	if err != nil {
 		return nil, false, 0, errcode.ErrInternal
 	}
+	_ = invalidateB30Cache(ctx, userID)
 
 	return record, created, avgB30, nil
 }
 
 func (s *RecordService) GetBest30(ctx context.Context, userID uint, calcMode string) ([]dto.Best30Item, float64, error) {
-	items, avgB30, err := s.recordRepo.GetBest30ByUserID(ctx, userID, normalizeCalcMode(calcMode))
+	mode := normalizeCalcMode(calcMode)
+	cacheKey := buildB30CacheKey(userID, mode)
+
+	var cached b30CacheValue
+	if ok, err := redisGetJSON(ctx, cacheKey, &cached); err == nil && ok {
+		return cached.List, cached.AvgB30, nil
+	}
+
+	items, avgB30, err := s.recordRepo.GetBest30ByUserID(ctx, userID, mode)
 	if err != nil {
 		return nil, 0, errcode.ErrInternal
 	}
+	_ = redisSetJSON(ctx, cacheKey, b30CacheValue{
+		List:   items,
+		AvgB30: avgB30,
+	}, b30CacheTTL)
 
 	return items, avgB30, nil
 }
@@ -191,6 +205,7 @@ func (s *RecordService) DeleteRecord(ctx context.Context, userID uint, req dto.D
 	if err != nil {
 		return false, 0, errcode.ErrInternal
 	}
+	_ = invalidateB30Cache(ctx, userID)
 	return deleted, avgB30, nil
 }
 
@@ -219,6 +234,23 @@ func normalizeCalcMode(raw string) string {
 		return "const"
 	}
 	return "official"
+}
+
+type b30CacheValue struct {
+	List   []dto.Best30Item `json:"list"`
+	AvgB30 float64          `json:"avg_b30"`
+}
+
+func buildB30CacheKey(userID uint, mode string) string {
+	return fmt.Sprintf("cache:b30:user:%d:mode:%s", userID, normalizeCalcMode(mode))
+}
+
+func invalidateB30Cache(ctx context.Context, userID uint) error {
+	return redisDel(
+		ctx,
+		buildB30CacheKey(userID, "official"),
+		buildB30CacheKey(userID, "const"),
+	)
 }
 
 func normalizeStatisticsDifficulty(raw string) string {
